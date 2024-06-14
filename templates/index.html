@@ -23,11 +23,10 @@
                 <input id="title" type="text" class="form-control" placeholder="Job Title" name="title" />
               </div>
               <div class="form-group col-md-4">
-                <input id="dept" type="text" class="form-control" placeholder="Department" name="dept" />
+                <input id="company" type="text" class="form-control" placeholder="Company Name" name="company" />
               </div>
-              <div class="form-check col-md-2">
-                <input id="telecommute" type="checkbox" class="form-check-input" name="telecommute" />
-                <label for="telecommute" class="form-check-label">Telecommuting</label>
+              <div class="form-group col-md-4">
+                <input id="salary" type="text" class="form-control" placeholder="Salary Range" name="salary" />
               </div>
             </div>
             <div class="row">
@@ -35,10 +34,51 @@
                 <input id="location" type="text" class="form-control" placeholder="Location" name="location" />
               </div>
               <div class="form-group col-md-4">
-                <input id="company" type="text" class="form-control" placeholder="Company" name="company" />
+                <input id="department" type="text" class="form-control" placeholder="Department Name" name="department" />
               </div>
               <div class="form-group col-md-4">
-                <input id="salary" type="text" class="form-control" placeholder="Salary" name="salary" />
+                <select aria-label="choose employment type" id="employment_type" name="employment_type">
+                  <option>--Employment Type--</option>
+                  <option>Part-Time</option>
+                  <option>Full-Time</option>
+                  <option>Per Diem / Temporary</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-check col-md-3">
+                <input id="telecommute" type="checkbox" class="form-check-input" name="telecommute" />
+                <label for="telecommute" class="form-check-label">Telecommuting</label>
+              </div>
+              <div class="form-check col-md-3">
+                <input id="has_logo" type="checkbox" class="form-check-input" name="has_logo" />
+                <label for="has_logo" class="form-check-label">Has Logo</label>
+              </div>
+              <div class="form-check col-md-3">
+                <input id="has_questions" type="checkbox" class="form-check-input" name="has_questions" />
+                <label for="has_questions" class="form-check-label">Has Questions</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-4">
+                <select aria-label="choose education" id="required_education" name="required_education">
+                  <option>--Required Education--</option>
+                  <option>High School</option>
+                  <option>Bachelors Degree</option>
+                  <option>Masters Degree</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <select aria-label="choose experience" id="required_experience" name="required_experience">
+                  <option>--Required Experience--</option>
+                  <option>Entry Level</option>
+                  <option>Apprenticeship</option>
+                  <option>Senior Level</option>
+                  <option>Manager Level</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <input id="industry" type="text" class="form-control" placeholder="Industry Name" name="industry" />
               </div>
             </div>
             <div class="row">
