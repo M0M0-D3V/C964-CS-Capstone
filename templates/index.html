@@ -17,7 +17,7 @@
       <h1>Job Posting Checker</h1>
       <div class="row">
         <div class="col">
-          <form action="/api" method="post">
+          <form id="myForm" action="/api" method="post">
             <div class="row">
               <div class="form-group col-md-4">
                 <input id="title" type="text" class="form-control" placeholder="Job Title" name="title" />
@@ -101,7 +101,7 @@
               </div>
             </div>
             <input class="btn btn-success" type="submit" />
-            <button class="btn btn-secondary" type="button">Clear</button>
+            <button class="btn btn-secondary" type="button" onclick="document.GetElementById('myForm').reset();">Clear</button>
           </div>
         </form>
       </div>

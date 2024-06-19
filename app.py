@@ -85,7 +85,7 @@ def predict():
     
     if result == 0:
       result = 'Fake'
-    elif result == 1:
+    else:
       result = 'Real'
     
     # Store the result into session
