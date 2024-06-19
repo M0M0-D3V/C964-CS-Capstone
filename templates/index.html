@@ -34,7 +34,27 @@
                 <input id="location" type="text" class="form-control" placeholder="Location" name="location" />
               </div>
               <div class="form-group col-md-4">
-                <input id="department" type="text" class="form-control" placeholder="Department Name" name="department" />
+                <select aria-label="choose department" id="department" name="department">
+                  <option>--Department--</option>
+                  <option>Sales</option>
+                  <option>Engineering</option>
+                  <option>Marketing</option>
+                  <option>Operations</option>
+                  <option>IT</option>
+                  <option>Development</option>
+                  <option>Product</option>
+                  <option>Information Technology</option>
+                  <option>Customer Service</option>
+                  <option>Finance</option>
+                  <option>HR</option>
+                  <option>Tech</option>
+                  <option>R&D</option>
+                  <option>Creative</option>
+                  <option>Retail</option>
+                  <option>Client Services</option>
+                  <option>Product Development</option>
+                  <option>Business Development</option>
+                </select>
               </div>
               <div class="form-group col-md-4">
                 <select aria-label="choose employment type" id="employment_type" name="employment_type">
@@ -43,6 +63,7 @@
                   <option>Full-Time</option>
                   <option>Temporary</option>
                   <option>Contract</option>
+                  <option>Other</option>
                 </select>
               </div>
             </div>
@@ -64,22 +85,54 @@
               <div class="form-group col-md-4">
                 <select aria-label="choose education" id="required_education" name="required_education">
                   <option>--Required Education--</option>
-                  <option>High School</option>
+                  <option>High School or equivalent</option>
+                  <option>Some College Coursework Completed</option>
+                  <option>Associate Degree</option>
                   <option>Bachelors Degree</option>
-                  <option>Masters Degree</option>
+                  <option>Master's Degree</option>
+                  <option>Certification</option>
+                  <option>Professional</option>
+                  <option>Unspecified</option>
                 </select>
               </div>
               <div class="form-group col-md-4">
                 <select aria-label="choose experience" id="required_experience" name="required_experience">
                   <option>--Required Experience--</option>
+                  <option>Applicable</option>
+                  <option>Apprenticeship/Internship</option>
                   <option>Entry Level</option>
-                  <option>Apprenticeship</option>
+                  <option>Associate</option>
+                  <option>MidSenior Level</option>
                   <option>Senior Level</option>
                   <option>Manager Level</option>
+                  <option>Director</option>
+                  <option>Executive</option>
                 </select>
               </div>
               <div class="form-group col-md-4">
-                <input id="industry" type="text" class="form-control" placeholder="Industry Name" name="industry" />
+                <select aria-label="choose industry" id="industry" name="industry">
+                  <option>--Industry--</option>
+                  <option>Technology and Services</option>
+                  <option>Computer Software</option>
+                  <option>Internet</option>
+                  <option>Education Management</option>
+                  <option>Marketing and Advertising</option>
+                  <option>Financial Services</option>
+                  <option>Hospital & Health Care</option>
+                  <option>Consumer Services</option>
+                  <option>Telecommunications</option>
+                  <option>Oil & Energy</option>
+                  <option>Retail</option>
+                  <option>Real Estate</option>
+                  <option>Accounting</option>
+                  <option>Construction</option>
+                  <option>E-Learning</option>
+                  <option>Design</option>
+                  <option>Staffing and Recruiting</option>
+                  <option>Management Consulting</option>
+                  <option>Health, Wellness and Fitness</option>
+                  <option>Insurance</option>
+                </select>
               </div>
             </div>
             <div class="row">
@@ -101,7 +154,7 @@
               </div>
             </div>
             <input class="btn btn-success" type="submit" />
-            <button class="btn btn-secondary" type="button" onclick="document.GetElementById('myForm').reset();">Clear</button>
+            <button class="btn btn-secondary" type="button" onclick="document.getElementById('myForm').reset();">Clear</button>
           </div>
         </form>
       </div>

@@ -20,9 +20,16 @@
   <body>
     <div class="container">
       <h3 id="answer">This job is {{result}}!</h3>
-      <a id="show-visuals" href="#" class="btn btn-primary"
+      <a
+        id="show-visuals"
+        href="#"
+        class="btn btn-primary"
+        onclick="showVisuals()"
         >Click to see visualizations</a
       >
+      <a href="/" class="btn btn-secondary">Go back to job checker</a>
+      <div id="image-container" class="container"></div>
     </div>
   </body>
+  <script src="{{ url_for('static', filename='script.js')}}"></script>
 </html>

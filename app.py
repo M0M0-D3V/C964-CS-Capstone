@@ -1,10 +1,12 @@
+import os
 import pickle
 import re
 
 import nltk
 import numpy as np
 import pandas as pd
-from flask import Flask, redirect, render_template, request, session, url_for
+from flask import (Flask, jsonify, redirect, render_template, request, session,
+                   url_for)
 
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -70,6 +72,8 @@ def predict():
 
     # Now join everything together
     all_text = ' '.join([job_posting, flat_tokens, flat_sentences, flat_pos_tagged, flat_ngrams])
+    print("***************all_text************************")
+    print(all_text)
     
     # Transfor the new data using the same vectorizer object
     X_new_vec = vectorizer.transform([all_text])
@@ -117,6 +121,12 @@ def preprocess_text(text):
   words = [word for word in text.split() if word.lower() not in stop_words]
   text = ' '.join(words)
   return text
+
+@app.route('/api/images')
+def get_image_filenames():
+  image_folder = os.path.join(app.static_folder, 'images')
+  image_filenames = os.listdir(image_folder)
+  return jsonify(image_filenames)
 
 def pos_tagging(sentence):
   tokens = word_tokenize(sentence)
