@@ -14,28 +14,33 @@
   </head>
   <body>
     <div class="container">
-      <h1>Job Posting Checker</h1>
-      <div class="row">
+      <h1 class="display-4 text-center font-weight-bold mt-1">Job Posting Checker</h1>
+      <div class="row mt-1">
         <div class="col">
-          <form id="myForm" action="/api" method="post">
-            <div class="row">
+          <form id="myForm" action="/api" method="post" class="p-3">
+            <div class="row mt-1">
               <div class="form-group col-md-4">
+                <label for="title" class="form-label">Job Title</label>
                 <input id="title" type="text" class="form-control" placeholder="Job Title" name="title" />
               </div>
               <div class="form-group col-md-4">
+                <label for="company" class="form-label">Company Name</label>
                 <input id="company" type="text" class="form-control" placeholder="Company Name" name="company" />
               </div>
               <div class="form-group col-md-4">
+                <label for="salary" class="form-label">Salary Range</label>
                 <input id="salary" type="text" class="form-control" placeholder="Salary Range" name="salary" />
               </div>
             </div>
-            <div class="row">
+            <div class="row mt-1">
               <div class="form-group col-md-4">
+                <label for="location" class="form-label">Location</label>
                 <input id="location" type="text" class="form-control" placeholder="Location" name="location" />
               </div>
               <div class="form-group col-md-4">
-                <select aria-label="choose department" id="department" name="department">
-                  <option>--Department--</option>
+                <label for="department" class="form-label">Department</label>
+                <select class="form-select" aria-label="choose department" id="department" name="department">
+                  <option disabled selected>--Department--</option>
                   <option>Sales</option>
                   <option>Engineering</option>
                   <option>Marketing</option>
@@ -57,8 +62,9 @@
                 </select>
               </div>
               <div class="form-group col-md-4">
-                <select aria-label="choose employment type" id="employment_type" name="employment_type">
-                  <option>--Employment Type--</option>
+                <label for="employment_type" class="form-label">Employment Type</label>
+                <select class="form-select" aria-label="choose employment type" id="employment_type" name="employment_type">
+                  <option disabled selected>--Employment Type--</option>
                   <option>Part-Time</option>
                   <option>Full-Time</option>
                   <option>Temporary</option>
@@ -67,8 +73,8 @@
                 </select>
               </div>
             </div>
-            <div class="row">
-              <div class="form-check col-md-3">
+            <div class="row mt-1 pt-1">
+              <div class="form-check col-md-3 offset-md-1">
                 <input id="telecommute" type="checkbox" class="form-check-input" name="telecommute" />
                 <label for="telecommute" class="form-check-label">Telecommuting</label>
               </div>
@@ -81,10 +87,11 @@
                 <label for="has_questions" class="form-check-label">Has Questions</label>
               </div>
             </div>
-            <div class="row">
+            <div class="row mt-1">
               <div class="form-group col-md-4">
-                <select aria-label="choose education" id="required_education" name="required_education">
-                  <option>--Required Education--</option>
+                <label for="required_education" class="form-label">Required Education</label>
+                <select class="form-select" aria-label="choose education" id="required_education" name="required_education">
+                  <option disabled selected>--Required Education--</option>
                   <option>High School or equivalent</option>
                   <option>Some College Coursework Completed</option>
                   <option>Associate Degree</option>
@@ -96,8 +103,9 @@
                 </select>
               </div>
               <div class="form-group col-md-4">
-                <select aria-label="choose experience" id="required_experience" name="required_experience">
-                  <option>--Required Experience--</option>
+                <label for="required_experience" class="form-label">Required Experience</label>
+                <select class="form-select" aria-label="choose experience" id="required_experience" name="required_experience">
+                  <option disabled selected>--Required Experience--</option>
                   <option>Applicable</option>
                   <option>Apprenticeship/Internship</option>
                   <option>Entry Level</option>
@@ -110,8 +118,9 @@
                 </select>
               </div>
               <div class="form-group col-md-4">
-                <select aria-label="choose industry" id="industry" name="industry">
-                  <option>--Industry--</option>
+                <label for="industry" class="form-label">Industry</label>
+                <select class="form-select" aria-label="choose industry" id="industry" name="industry">
+                  <option disabled selected>--Industry--</option>
                   <option>Technology and Services</option>
                   <option>Computer Software</option>
                   <option>Internet</option>
@@ -135,29 +144,36 @@
                 </select>
               </div>
             </div>
-            <div class="row">
+            <div class="row mt-1">
               <div class="form-group col-md-6">
-                <textarea id="requirements" class="form-control" placeholder="Requirements" name="requirements"></textarea>
+                <label for="requirements" class="form-label">Requirements</label>
+                <textarea id="requirements" class="form-control" placeholder="Requirements" name="requirements" rows="5"></textarea>
               </div>
               <div class="form-group col-md-6">
-                <textarea id="benefits" class="form-control" placeholder="Benefits" name="benefits"></textarea>
+                <label for="benefits" class="form-label">Benefits</label>
+                <textarea id="benefits" class="form-control" placeholder="Benefits" name="benefits" rows="5"></textarea>
               </div>
             </div>
-            <div class="row">
+            <div class="row mt-1">
               <div class="form-group col-md-12">
-                <textarea id="description" class="form-control" placeholder="Job Description" name="description"></textarea>
+                <label for="description" class="form-label">Description</label>
+                <textarea id="description" class="form-control" placeholder="Job Description" name="description" rows="7"></textarea>
               </div>
             </div>
-            <div class="row">
+            <div class="row mt-1">
               <div class="form-group col-md-12">
-                <textarea id="company-profile" class="form-control" placeholder="Company Profile" name="company-profile"></textarea>
+                <label for="company-profile" class="form-label">Company Profile</label>
+                <textarea id="company-profile" class="form-control" placeholder="Company Profile" name="company-profile" rows="4"></textarea>
               </div>
             </div>
-            <input class="btn btn-success" type="submit" />
-            <button class="btn btn-secondary" type="button" onclick="document.getElementById('myForm').reset();">Clear</button>
+            <div class="row mt-3">
+              <input class="btn btn-success" type="submit" />
+              <button class="btn btn-secondary mt-1" type="button" onclick="document.getElementById('myForm').reset();">Clear</button>
+            </div>
           </div>
         </form>
       </div>
     </div>
+    <footer class="text-muted text-right container-fluid bg-light mt-3 p-2">Computer Science Capstone Project by: Monica Hong, WGU Student ID# 011580462, June 20, 2024</footer>
   </body>
 </html>
