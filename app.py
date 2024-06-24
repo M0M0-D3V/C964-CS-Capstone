@@ -87,7 +87,7 @@ def predict():
     # change type to int
     result = result.astype(int)
     
-    if result == 0:
+    if result == 1:
       result = 'Fake'
     else:
       result = 'Real'
