@@ -33,22 +33,38 @@ def predict():
   if request.method == 'POST':
     # Get data from form inputs
     data = []
-    data.append(request.form.get('title'))
-    data.append(request.form.get('location'))
-    data.append(request.form.get('department'))
-    data.append(request.form.get('salary'))
-    data.append(request.form.get('company-profile'))
-    data.append(request.form.get('company'))
-    data.append(request.form.get('description'))
-    data.append(request.form.get('requirements'))
-    data.append(request.form.get('benefits'))
-    data.append(request.form.get('telecommute'))
-    data.append(request.form.get('has_logo'))
-    data.append(request.form.get('has_questions'))
-    data.append(request.form.get('employment_type'))
-    data.append(request.form.get('required_experience'))
-    data.append(request.form.get('required_education'))
-    data.append(request.form.get('industry'))
+    if request.form.get('title') != None:
+      data.append(request.form.get('title'))
+    if request.form.get('location') != None:
+      data.append(request.form.get('location'))
+    if request.form.get('department') != None:
+      data.append(request.form.get('department'))
+    if request.form.get('salary') != None:
+      data.append(request.form.get('salary'))
+    if request.form.get('company') != None:
+      data.append(request.form.get('company-profile'))
+    if request.form.get('company') != None:
+      data.append(request.form.get('company'))
+    if request.form.get('description') != None:
+      data.append(request.form.get('description'))
+    if request.form.get('requirements') != None:
+      data.append(request.form.get('requirements'))
+    if request.form.get('benefits') != None:
+      data.append(request.form.get('benefits'))
+    if request.form.get('telecommute') != None:
+      data.append(request.form.get('telecommute'))
+    if request.form.get('has_logo') != None:
+      data.append(request.form.get('has_logo'))
+    if request.form.get('has_questions') != None:
+      data.append(request.form.get('has_questions'))
+    if request.form.get('employment_type') != None:
+      data.append(request.form.get('employment_type'))
+    if request.form.get('required_experience') != None:
+      data.append(request.form.get('required_experience'))
+    if request.form.get('required_education') != None:
+      data.append(request.form.get('required_education'))
+    if request.form.get('industry') != None:
+      data.append(request.form.get('industry'))
     
     concat_posting = ' '.join(str(i) for i in data)
     
@@ -82,7 +98,7 @@ def predict():
     
     prediction = model.predict(X_new_vec)
     result = prediction[0]
-    print("****************************************************************")
+    print("**************************result**************************************")
     print(result)
     # change type to int
     result = result.astype(int)
