@@ -87,10 +87,10 @@ def predict():
     # change type to int
     result = result.astype(int)
     
-    if result == 1:
-      result = 'Fake'
-    else:
+    if result == 0:
       result = 'Real'
+    else:
+      result = 'Fake'
     
     # Store the result into session
     session['result'] = result
