@@ -26,7 +26,11 @@ with open ('vectorizer.pkl', 'rb') as v:
 
 @app.route("/")
 def hello():
-    return render_template('index.html')
+  return render_template('index.html')
+  
+@app.route('/jobcheck')
+def jobcheck():
+  return render_template('jobform.html')
   
 @app.route('/api', methods=['POST'])
 def predict():
