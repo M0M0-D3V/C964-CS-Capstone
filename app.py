@@ -55,12 +55,6 @@ def predict():
       data.append(request.form.get('requirements'))
     if request.form.get('benefits') != None:
       data.append(request.form.get('benefits'))
-    if request.form.get('telecommute') != None:
-      data.append(request.form.get('telecommute'))
-    if request.form.get('has_logo') != None:
-      data.append(request.form.get('has_logo'))
-    if request.form.get('has_questions') != None:
-      data.append(request.form.get('has_questions'))
     if request.form.get('employment_type') != None:
       data.append(request.form.get('employment_type'))
     if request.form.get('required_experience') != None:
